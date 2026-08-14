@@ -7,6 +7,12 @@ DeepSeek Harness 插件：GitHub 风格用量热力图 + Token / 缓存命中 / 
 - **工作区别名**：头部「✎ 工作区别名」管理，持久化保存（`$DSH_HOME/storages` 的 KV 单元 `usage-stats-aliases`）
 - 时间范围切换（近 30 天 / 近 90 天 / 全部）、动画、亮暗主题自适应
 
+## 效果截图
+
+![用量统计页面效果截图 1](assets/screenshot-1.png)
+
+![用量统计页面效果截图 2](assets/screenshot-2.png)
+
 ## 安装
 
 本插件是标准的 DSH 社区插件包（声明 `dsh.bundle` manifest + web client 半），数据全部来自持久化会话日志，安装后自动回填历史。
