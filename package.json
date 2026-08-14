@@ -1,0 +1,41 @@
+{
+  "name": "dsh-usage-stats",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 用量统计插件：GitHub 风格热力图、Token/缓存命中/账户余额看板、工作区别名管理",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings-general"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "usage",
+    "stats",
+    "heatmap",
+    "tokens",
+    "balance"
+  ],
+  "license": "MIT"
+}
