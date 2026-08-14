@@ -1,5 +1,7 @@
 # dsh-usage-stats
 
+[![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)](https://awesome-dsh-plugin.com)
+
 DeepSeek Harness 插件：GitHub 风格用量热力图 + Token / 缓存命中 / 账户余额看板 + 工作区别名管理。
 
 - **热力图**：53 周 GitHub 绿，每完成一个回合点亮；悬停按工作区显示次数明细与当日 Token
