@@ -1,0 +1,5 @@
+# dsh-usage-stats 的 bundle patch：作为社区插件层被 dsh plugin add 安装时，
+# 本文件插入插件行（host 半 = 包默认导出；client 半 = dsh.client 标记扫描）。
+- insert:
+    - id: usage-stats
+      name: dsh-usage-stats

@@ -9,31 +9,29 @@ DeepSeek Harness 插件：GitHub 风格用量热力图 + Token / 缓存命中 / 
 
 ## 安装
 
-本插件是标准的 DSH 双面插件包（host 半 + web client 半）。
+本插件是标准的 DSH 社区插件包（声明 `dsh.bundle` manifest + web client 半），数据全部来自持久化会话日志，安装后自动回填历史。
 
-### 方式一：profile 依赖安装（推荐，已发布到 npm 后）
+### 方式一：官方插件命令（推荐）
 
 ```bash
-dsh plugin --profile web install dsh-usage-stats
+dsh plugin --profile web add dsh-usage-stats
 ```
 
-然后在 `$DSH_HOME/profiles/web/cordis.patch.yml` 加入一行：
+安装后刷新页面即可，无需手动改配置、无需重启。
 
-```yaml
-- insert:
-    - id: usage-stats
-      name: dsh-usage-stats
-```
-
-用户 patch 层会被热重载：保存后刷新页面即可（无需重启 DSH）。
-
-### 方式二：本地包手动注册
+### 方式二：手动注册（本地包）
 
 1. 把本目录放入任意位置，并在 `$DSH_HOME/profiles/node_modules/` 下创建指向本目录的符号链接（Windows 用 junction）：
    ```powershell
    New-Item -ItemType Junction -Path "$env:DSH_HOME\profiles\node_modules\dsh-usage-stats" -Target "<本目录绝对路径>"
    ```
-2. 按方式一在 `cordis.patch.yml` 中添加行。
+2. 在 `$DSH_HOME/profiles/web/cordis.patch.yml` 添加一行：
+   ```yaml
+   - insert:
+       - id: usage-stats
+         name: dsh-usage-stats
+   ```
+   用户 patch 层会被热重载：保存后刷新页面即可。
 
 ## 架构
 
